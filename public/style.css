@@ -1,0 +1,172 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7; /* Light background */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white; /* Container background */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Max width for the chat container */
+    padding: 20px;
+}
+
+/* Chat Messages Styles */
+#messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    height: 300px;
+    overflow-y: auto; /* Scrollable messages */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fefefe; /* Slightly off-white for contrast */
+}
+
+#messages li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+#messages li:hover {
+    background: #f1f1f1; /* Light hover effect */
+    transform: scale(1.01); /* Slight scale up on hover */
+}
+
+.user-icon {
+    width: 40px; /* Increased icon size for better visibility */
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.user1-icon {
+    background-image: url('img1.png'); /* Replace with the actual path */
+}
+
+.user2-icon {
+    background-image: url('img2.png'); /* Replace with the actual path */
+}
+
+.message-content {
+    flex: 1;
+    padding: 8px;
+    background: #e9ecef; /* Light grey background for messages */
+    border-radius: 20px; /* Rounded corners for message bubbles */
+}
+
+/* Input Form Styles */
+#form {
+    display: flex;
+    margin-top: 10px;
+}
+
+#input {
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px;
+    flex: 1;
+    margin-right: 10px; /* Space between input and button */
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+#input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    background: #007bff; /* Primary button color */
+    color: white;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+button:hover {
+    background: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    #messages {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #2c2c2c; /* Dark background for dark mode */
+    color: #f1f1f1; /* Light text color for dark mode */
+}
+
+.container.dark-mode {
+    background: #3e3e3e; /* Darker container */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Subtle light shadow */
+}
+
+#messages.dark-mode {
+    background: #444; /* Darker messages background */
+    border: 1px solid #555; /* Darker border for messages */
+}
+
+#messages li.dark-mode {
+    background: #555; /* Darker message bubbles */
+}
+
+#messages li:hover.dark-mode {
+    background: #666; /* Light hover effect in dark mode */
+}
+
+.user1-icon.dark-mode,
+.user2-icon.dark-mode {
+    background-color: #007bff; /* Adjust icon background color in dark mode */
+}
+
+.message-content.dark-mode {
+    background: #333; /* Darker message content */
+}
+/* Input Form Styles */
+#form {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    margin-top: 10px;
+}
+
+#input {
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px;
+}
+
+#file-input {
+    margin-bottom: 10px; /* Space between file input and send button */
+}
+
+/* Button Styles */
+button {
+    border: none;
+    padding: 10px 15px;
+    background: #007bff; /* Primary button color */
+    color: white;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Smooth transition */
+}
